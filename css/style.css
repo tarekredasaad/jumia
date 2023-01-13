@@ -1,0 +1,202 @@
+body{
+  box-sizing: border-box;
+  margin: 0px;
+  padding:0px;
+  background-color: #f5f5f5 !important;
+  height: auto;
+  position: relative;
+}
+html{
+  font-size: 10px;
+}
+header{
+  background-color: #ff9900;
+}
+@media  (max-width: 412px) { 
+  #help,#loginTitle,#marketTitle{
+    display: none;
+
+  }
+  #searchInput{
+width:auto
+  }
+}
+#LanLogo{
+  text-decoration: none;
+}
+#langsDiv{
+  padding-top: 0.2rem;
+  background-color:#f5f5f5;
+  height: 2rem;
+}
+#star{
+  text-decoration: none;
+  color: #ff9900;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+#star:hover{
+  text-decoration: underline;
+  color: #ff9900 !important;
+}
+#searchButton{
+  background-color: #ff9900 !important;
+  font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;;
+  font-size: 1.3rem;
+  color: #FFFFFF;
+}
+#searchInput{
+  direction: rtl;
+}
+
+#market,#help,#login{
+  font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+#market:hover{
+  color: #ff9900;
+  cursor: pointer;
+}
+#help:hover{
+  color: #ff9900;
+  cursor: pointer;
+}
+#login:hover{
+  color: #ff9900;
+  cursor: pointer;
+}
+#JumiaIcon:hover{
+  cursor: pointer;
+}
+#nav{
+  position: sticky !important;
+  top: 0px;
+  z-index: 100000000000000;
+  background-color: #FFFFFF;
+  height: 30px !important;
+}
+#rightMenu {
+  direction: rtl;
+  font-size: 1.6rem;
+
+line-height: 2;
+  
+
+}
+#menuItem{
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif;
+  color: black;
+  text-decoration: none !important;
+
+}
+#rightMenu *{
+  text-decoration: none !important;
+  background-color: #FFFFFF;
+
+  
+}
+
+#menuItem:hover{
+  color: #ff9900;
+}
+a{
+  color: black !important;
+  cursor: pointer;
+}
+#item *:hover{
+  color: #ff9900 !important;
+}
+#slide img{
+  height: 380px !important;
+  
+}
+#products{
+  grid-gap: 5px;
+}
+.card:hover{
+  transform: scale(1.0);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(01);
+  -o-transform: scale(1);
+}
+#remaingTimeDiv,#alert{
+  height: 3rem !important;
+  font-size: 2rem;
+}
+#subRow{
+  grid-gap: 0rem;
+}
+#subRow img:hover{
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 2px solid darkred;
+}
+.alert-danger {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}
+#alert2{
+  font-size: 2rem;
+
+}
+#grid3 img:hover{
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  border: 2px solid red;
+}
+#downText{
+  direction: rtl;
+  background-color: #FFFFFF;
+  font-size:larger;
+}
+.darkMode
+{
+  background-color: black !important;
+  
+  
+}
+.lightMode{
+  background-color: #f5f5f5 !important;
+  
+}
+#myBtnSpan{
+  position: relative;
+  background-color: #ff9900 !important;
+}
+ span #topBtn *{
+  position:fixed;
+  left: 3rem;
+  bottom: 2rem;
+  background-color: #ff9900;
+  color: black;
+  font-size: x-large;
+  border: 2px solid darkred;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  z-index: 1000000;
+}
+#darkLightIcon:hover{
+  color: #ff9900;
+}

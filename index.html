@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link href="css/bootstrap-grid.min.css">
+    <link href="css/bootstrap-grid.rtl.min.css">
+    <link href="css/bootstrap-reboot.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="js/bootstrap.esm.min.js"></script> -->
+    <script src=""></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" >
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+     <!-- <link rel="stylesheet" href="main.css"> -->
+     <style>
+      #header{
+        background-color: orangered;
+      }
+      #nav{
+        background-color: orange;
+      }
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+  
+        .b-example-divider {
+          height: 3rem;
+          background-color: rgba(0, 0, 0, .1);
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+  
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+  
+        .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+  
+        .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+        .darkMode
+        {
+          background-color: black !important;
+          
+          
+        }
+        .lightMode{
+          background-color: #f5f5f5 !important;
+          
+        }
+      </style>
+      <link href="css/carousel.css" rel="stylesheet">
+</head>
+<body id="TotalBody">
+  <header id ="header">
+    <div class="container-fluid container-md">
+      <a href="#">
+        <img src="images/42.gif" class="w-100" alt="">
+      </a>
+    </div>
+  </header>
+  <div class="container-fluid" id="langsDiv">
+    <div class="container" >
+        <div class="row">
+            <div class="col-4 col-lg-3 "><a id="LanLogo" href="#">Arabic <img src="images/Egypt.png" width="10px" height="10px" alt=""></a>|<a id="LanLogo" href="#">English <img src="images/EnglishLogo.png" width="10px" height="100%" alt=""></a></div>
+            <div class="col-lg-3 d-none d-lg-block text-center"><a href="#"><img src="images/LogisticsLogo.png" width="50px" height="10px" alt=""></a><a href="#"><img src="images/PAYLogo.png" width="30px" height="10px" alt=""></a></div>
+            <div class="col-4 col-lg-4 text-end"><a id="star" href="#"><span>بيع على جوميا</span><img src="images/starLogo.png" width="10px" height="10px" alt=""></a></a></div>
+           <div class="col-4 col-lg-2 text-end" id ="darkLightIcon" ><i class="fa-solid fa-sun" id="lightDarkMode"></i></div> 
+
+          </div>
+    </div>
+</div>
+  <div id="nav">
+
+    <div class="container" >
+      <div class="row">
+        <div class="col-sm-4 col-md-3 col-lg-2" id="market">
+          <span id="marketTitle" class=" d-none d-md-block"> items in Your Cart
+            <img id="marketIcon" src="images/market.png " width="12px" height="12px" >
+          </span>
+        </div>
+    
+        <div class="col-md-3 col-lg-2 d-none d-lg-block" id="help">
+          <span id="helpText"> Help
+            <i class="fa-regular fa-circle-question" id="helpIcon"></i>
+          </span>
+        </div>
+    
+        <div class="col-sm-4 col-md-3 col-lg-2 " id="login">
+          <span id="loginTitle" class="d-none d-md-block" > Login
+            <i class="fa-regular fa-user" id="loginIcon"></i> 
+          </span>
+        </div>
+    
+        <div class="col-lg-4 d-none d-lg-block">
+          <form class="d-flex">
+            <button class="btn " type="button" id="searchButton" >Search</button>
+            <input class="form-control ms-2" type="text" placeholder="Search about items and brands" id="searchInput" style="width:250px ;">
+          </form>
+        </div>
+        <div class="col-sm-4 col-md-3 col-lg-2 "id="jumiaIcon">
+          <a href="#"><img src="jumia-seeklogo.com.svg" width="90px" height="30px" alt="" ></a>
+        </div>
+    
+    
+       
+      </div>
+    
+    
+    
+    
+     </div>
+  </div>
+ 
+  <!-- <div id="demo2" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots 
+    <div class="carousel-indicators d-none">
+      <button type="button" data-bs-target="#demo2" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo2" data-bs-slide-to="1"></button>
+    </div>
+  
+    <!-- The slideshow/carousel
+    <div class="carousel-inner" >
+      <div class="carousel-item active">
+          <div class="container">
+  
+            <div class="row "id="products">
+  
+                    <div class="card col-sm-12 col-md-6 col-lg-2" >
+                      <img class="card-img-top" src="images/1.jpg" alt="Card image" height="100px">
+                      <div class="card-body">
+                          <h4 class="card-title">John Doe</h4>
+                          <p class="card-text">Some example text.</p>
+                          <a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                    </div>
+  
+                    <div class="card col-md-6 col-lg-2 d-none d-md-block" >
+                      <img class="card-img-top" src="images/2.jpg" alt="Card image" height="100px">
+                      <div class="card-body">
+                          <h4 class="card-title">John Doe</h4>
+                          <p class="card-text">Some example text.</p>
+                          <a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                    </div>
+  
+                    <div class="card col-lg-2 d-none d-lg-block" >
+                      <img class="card-img-top" src="images/3.jpg" alt="Card image" height="100px">
+                      <div class="card-body">
+                          <h4 class="card-title">John Doe</h4>
+                          <p class="card-text">Some example text.</p>
+                          <a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                    </div>
+  
+                    <div class="card col-lg-2 d-none d-lg-block" >
+                      <img class="card-img-top" src="images/4.jpg" alt="Card image" height="100px">
+                      <div class="card-body">
+                          <h4 class="card-title">John Doe</h4>
+                          <p class="card-text">Some example text.</p>
+                          <a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                    </div>
+  
+                    <div class="card col-lg-2 d-none d-lg-block" >
+                      <img class="card-img-top" src="images/5.jpg" alt="Card image" height="100px">
+                      <div class="card-body">
+                          <h4 class="card-title">John Doe</h4>
+                          <p class="card-text">Some example text.</p>
+                          <a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                    </div>
+  
+                    <div class="card col-lg-2 d-none d-lg-block">
+                      <img class="card-img-top" src="images/6.jpg" alt="Card image" height="100px">
+                      <div class="card-body">
+                          <h4 class="card-title">John Doe</h4>
+                          <p class="card-text">Some example text.</p>
+                          <a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                    </div>
+              
+            </div>
+          
+  
+  
+          
+        
+        </div>
+      </div>
+        <div class="carousel-item">
+          <div class="container">
+          <div class="row "id="products">
+  
+            <div class="card col-sm-12 col-md-6 col-lg-2" >
+              <img class="card-img-top" src="images/1.jpg" alt="Card image" height="100px">
+              <div class="card-body">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Some example text.</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+  
+            <div class="card col-md-6 col-lg-2 d-none d-md-block" >
+              <img class="card-img-top" src="images/2.jpg" alt="Card image" height="100px">
+              <div class="card-body">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Some example text.</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+  
+            <div class="card col-lg-2 d-none d-lg-block" >
+              <img class="card-img-top" src="images/3.jpg" alt="Card image" height="100px">
+              <div class="card-body">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Some example text.</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+  
+            <div class="card col-lg-2 d-none d-lg-block" >
+              <img class="card-img-top" src="images/4.jpg" alt="Card image" height="100px">
+              <div class="card-body">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Some example text.</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+  
+            <div class="card col-lg-2 d-none d-lg-block" >
+              <img class="card-img-top" src="images/5.jpg" alt="Card image" height="100px">
+              <div class="card-body">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Some example text.</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+  
+            <div class="card col-lg-2 d-none d-lg-block">
+              <img class="card-img-top" src="images/6.jpg" alt="Card image" height="100px">
+              <div class="card-body">
+                  <h4 class="card-title">John Doe</h4>
+                  <p class="card-text">Some example text.</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+      
+     </div>
+    </div>
+        
+       
+      </div>
+      </div>
+      
+  
+    <!-- Left and right controls/icons -->
+    <!--<button class="carousel-control-prev" type="button" data-bs-target="#demo2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+  
+    </button>
+    <button class="carousel-control-next"  type="button" data-bs-target="#demo2" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+  
+    </button>
+  
+  </div> -->
+    <div class="title">
+        <div class="container">
+            
+            <div class="card mb-2 " >
+                <div class="card-header bg-success border-success">Header</div>
+                <div class="card-body">
+                          <div class="row">
+                          <div class="img_box col-md-6">
+                            <img src="images/11.png" style="height: 130px; width: 100%;" alt="">
+                          </div>
+                          <div class="img_box col-md-6">
+                            <img src="images/12.png" style="height: 130px; width: 100%;" alt="">
+                          </div>
+                      </div>
+                    <!-- <div class="card-footer   border-success">Footer</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 000 -->
+    <div id="demo4" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators d-none">
+        <button type="button" data-bs-target="#demo4" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo4" data-bs-slide-to="1"></button>
+      </div>
+    
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner" ">
+        <div class="carousel-item active">
+          <div class="container">
+          <div class="row "id="products" style="position: relative;left: 13px;">
+    
+            <div class="card col-sm-12 col-md-6 col-lg-2" >
+              <img class="card-img-top" src="images/1.jpg" alt="Card image" height="100px" >
+              <div class="card-body">
+                  <h4 class="card-title">Product No.1</h4>
+                  <p class="card-text">Price:100 Pounds</p>
+                  <div class="progress" style="height:5px">
+                    <div class="progress-bar" style="width:40%;height:5px"></div>
+                  </div>
+                </div>
+            </div>
+    
+            <div class="card col-md-6 col-lg-2 d-none d-md-block" >
+              <img class="card-img-top" src="images/2.jpg" alt="Card image" height="100px">
+              <div class="card-body">
+                  <h4 class="card-title"> Product No.2</h4>
+                  <p class="card-text">Price:200 Pounds</p>
+                  <div class="progress" style="height:5px">
+                    <div class="progress-bar" style="width:40%;height:5px"></div>
+                  </div>
+    
+                </div>
+            </div>
+    
+            <div class="card col-lg-2 d-none d-lg-block" >
+              <img class="card-img-top" src="images/3.jpg" alt="Card image" height="100px">
+              <div class="card-body">
+                  <h4 class="card-title">Product No.3 </h4>
+                  <p class="card-text">Price:450 Pounds</p>
+                  <div class="progress" style="height:5px">
+                    <div class="progress-bar" style="width:40%;height:5px"></div>
+                  </div>
+    
+                </div>
+            </div>
+    
+            <div class="card col-lg-2 d-none d-lg-block" >
+              <img class="card-img-top" src="images/4.jpg" alt="Card image" height="100px">
+              <div class="card-body">
+                  <h4 class="card-title">Product No.4 </h4>
+                  <p class="card-text">Price:234 Pounds</p>
+                  <div class="progress" style="height:5px">
+                    <div class="progress-bar" style="width:40%;height:5px"></div>
+                  </div>
+    
+                </div>
+            </div>
+    
+            <div class="card col-lg-2 d-none d-lg-block" >
+              <img class="card-img-top" src="images/5.jpg" alt="Card image" height="100px">
+              <div class="card-body">
+                  <h4 class="card-title">Product No.5</h4>
+                  <p class="card-text">Price:423 Pounds</p>
+                  <div class="progress" style="height:5px">
+                    <div class="progress-bar" style="width:40%;height:5px"></div>
+                  </div>
+    
+                </div>
+            </div>
+    
+            <div class="card col-lg-2 d-none d-lg-block">
+              <img class="card-img-top" src="images/6.jpg" alt="Card image" height="100px">
+              <div class="card-body">
+                  <h4 class="card-title">Product No.6 </h4>
+                  <p class="card-text">Price:80 Pounds</p>
+                  <div class="progress" style="height:5px">
+                    <div class="progress-bar" style="width:40%;height:5px"></div>
+                  </div>
+    
+                </div>
+            </div>
+      
+     </div>
+    </div>
+        
+       
+      </div>
+        <div class="carousel-item">
+            <div class="container">
+            <div class="row "id="products" style="position: relative;left: 13px;">
+    
+              <div class="card col-sm-12 col-md-6 col-lg-2" >
+                <img class="card-img-top" src="images/1.jpg" alt="Card image" height="100px" >
+                <div class="card-body">
+                    <h4 class="card-title">Product No.7</h4>
+                    <p class="card-text">Price:100 Pounds</p>
+                    <div class="progress" style="height:5px">
+                      <div class="progress-bar" style="width:40%;height:5px"></div>
+                    </div>
+                  </div>
+              </div>
+    
+              <div class="card col-md-6 col-lg-2 d-none d-md-block" >
+                <img class="card-img-top" src="images/2.jpg" alt="Card image" height="100px">
+                <div class="card-body">
+                    <h4 class="card-title"> Product No.8</h4>
+                    <p class="card-text">Price:200 Pounds</p>
+                    <div class="progress" style="height:5px">
+                      <div class="progress-bar" style="width:40%;height:5px"></div>
+                    </div>
+    
+                  </div>
+              </div>
+    
+              <div class="card col-lg-2 d-none d-lg-block" >
+                <img class="card-img-top" src="images/3.jpg" alt="Card image" height="100px">
+                <div class="card-body">
+                    <h4 class="card-title">Product No.9 </h4>
+                    <p class="card-text">Price:450 Pounds</p>
+                    <div class="progress" style="height:5px">
+                      <div class="progress-bar" style="width:40%;height:5px"></div>
+                    </div>
+    
+                  </div>
+              </div>
+    
+              <div class="card col-lg-2 d-none d-lg-block" >
+                <img class="card-img-top" src="images/4.jpg" alt="Card image" height="100px">
+                <div class="card-body">
+                    <h4 class="card-title">Product No.10 </h4>
+                    <p class="card-text">Price:234 Pounds</p>
+                    <div class="progress" style="height:5px">
+                      <div class="progress-bar" style="width:40%;height:5px"></div>
+                    </div>
+    
+                  </div>
+              </div>
+    
+              <div class="card col-lg-2 d-none d-lg-block" >
+                <img class="card-img-top" src="images/5.jpg" alt="Card image" height="100px">
+                <div class="card-body">
+                    <h4 class="card-title">Product No.11</h4>
+                    <p class="card-text">Price:423 Pounds</p>
+                    <div class="progress" style="height:5px">
+                      <div class="progress-bar" style="width:40%;height:5px"></div>
+                    </div>
+    
+                  </div>
+              </div>
+    
+              <div class="card col-lg-2 d-none d-lg-block">
+                <img class="card-img-top" src="images/6.jpg" alt="Card image" height="100px">
+    
+                <div class="card-body">
+                    <h4 class="card-title">Product No.12 </h4>
+                    <p class="card-text">Price:80 Pounds</p>
+                    <div class="progress" style="height:5px">
+                      <div class="progress-bar" style="width:40%;height:5px"></div>
+                    </div>
+    
+                  </div>
+              </div>
+        
+       </div>
+      </div>
+          
+         
+        </div>
+        </div>
+        
+    
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo4" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    
+      </button>
+      <button class="carousel-control-next"  type="button" data-bs-target="#demo4" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    
+      </button>
+    </div>
+    <!-- 000 -->
+   
+    <!-- 000 -->
+    <div class="title">
+        <div class="container">
+            
+            <div class="card mb-2 " >
+                <div class="card-body">
+                          <div class="row">
+                          <div class="img_box col-sm-12 col-md-6 ">
+                            <img src="images/13.png" style="height: 160px; width: 100%;" alt="">
+                          </div>
+                          <div class="img_box col-sm-12 col-md-6">
+                            <img src="images/14.png" style="height: 160px; width: 100%;" alt="">
+                          </div>
+                      </div>
+                    <!-- <div class="card-footer   border-success">Footer</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 000 -->
+    <div class="title">
+        <div class="container">
+            
+            <div class="card mb-2 " >
+                <div class="card-body">
+                          <div class="row">
+                          <div class="img_box col-sm-12 col-md-6">
+                            <img src="images/15.png" style="height: 160px; width: 100%;" alt="">
+                          </div>
+                          <div class="img_box col-sm-12 col-md-6">
+                            <img src="images/16.png" style="height: 160px; width: 100%;" alt="">
+                          </div>
+                      </div>
+                    <!-- <div class="card-footer   border-success">Footer</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 000 -->
+    <div class="title">
+        <div class="container">
+            
+            <div class="card mb-2 " >
+                <div class="card-header text-center bg-success border-success">Header</div>
+                <div class="card-body">
+                          <div class="row text-center">
+                          <div class="img_box col-sm-12 col-lg-2 col-md-6">
+                            <img src="images/17.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-sm-12 col-lg-2 col-md-6">
+                            <img src="images/18.jpg" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-sm-12 col-lg-2 col-md-6">
+                            <img src="images/19.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-sm-12 col-lg-2 col-md-6">
+                            <img src="images/20.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-sm-12 col-lg-2 col-md-6 d-none d-md-block">
+                            <img src="images/21.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-sm-12 col-lg-2 col-md-6 d-none d-md-block">
+                            <img src="images/22.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-sm-12 col-lg-2 col-md-6 d-none d-md-block">
+                            <img src="images/23.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-sm-12 col-lg-2 col-md-6 d-none d-md-block">
+                            <img src="images/24.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-sm-12 col-lg-2 col-md-6 d-none d-md-block">
+                            <img src="images/25.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-sm-12 col-lg-2 col-md-6 d-none d-md-block">
+                            <img src="images/26.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-sm-12 col-lg-2 col-md-6 d-none d-md-block">
+                            <img src="images/27.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-sm-12 col-lg-2 col-md-6 d-none d-md-block">
+                            <img src="images/28.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                      </div>
+                    <!-- <div class="card-footer   border-success">Footer</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 000 -->
+    <div class="title">
+        <div class="container">
+            
+            <div class="card mb-2 " >
+                <div class="card-header text-center bg-success border-success">Header</div>
+                <div class="card-body">
+                          <div class="row text-center">
+                          <div class="img_box col-md-2">
+                            <img src="images/29.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-md-2">
+                            <img src="images/30.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-md-2 d-none d-md-block ">
+                            <img src="images/31.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-md-2 d-none d-md-block">
+                            <img src="images/32.jpg" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-md-2 d-none d-md-block">
+                            <img src="images/33.png" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                          <div class="img_box col-md-2 d-none d-md-block">
+                            <img src="images/34.jpg" style="height: 60px; width: 100%;" alt="">
+                            <p>soup</p>
+                            </div>
+                      </div>
+                    <!-- <div class="card-footer   border-success">Footer</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 000 -->
+    <div class="middle_page">
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-12 col-lg-9  col-sm-12">
+                    <div class="content_product ">
+                        <div class="card mb-2 text-center" >
+                            <div class="card-header text-center bg-success border-success">Header</div>
+                            <div class="card-body">
+                                    <div class="row text-center">
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/29.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/30.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/31.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/32.jpg" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/29.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/30.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/31.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/32.jpg" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/29.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/30.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/31.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/32.jpg" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/29.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/30.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/31.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/32.jpg" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/29.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/30.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/31.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/32.jpg" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/29.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/30.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/31.png" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                      <div class="img_box_product col-md-6 col-sm-12 col-lg-3 mb-2">
+                                        <img src="images/32.jpg" style="height: 60px; width: 100%;" alt="">
+                                        <p>soup</p>
+                                        <p>50$</p>
+                                        <div class="card-footer   border-success text-light">Add to cart</div>
+                                        </div>
+                                  </div>
+                                <!-- <div class="card-footer   border-success">Footer</div> -->
+                            </div>
+                            
+                                
+    
+                                    <nav aria-label="Page navigation example ">
+                                        <ul class="pagination justify-content-center">
+                                          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                        </ul>
+                                      </nav>
+                                
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-2 d-none d-lg-block">
+                    <div class="menu bg-dark text-end text-light" style="height: 182vh;">
+                        <p>الفئة</p>
+                        <p>بقالة</p>
+                        <div class="menu_lines bg-dark text-light pe-4">
+                            <p>معطر هواء</p>
+                            <p>مشروبات</p>
+                            <p>خبز و معجنات</p>
+                            <p>طعام و الإفطار</p>
+                            <p>الأغذية المعلبة</p>
+                            <p>معطر هواء</p>
+                            <p>مشروبات</p>
+                            <p>خبز و معجنات</p>
+                            <p>طعام و الإفطار</p>
+                            <p>الأغذية المعلبة</p>
+                            <p>معطر هواء</p>
+                            <p>مشروبات</p>
+                            <p>خبز و معجنات</p>
+                            <p>طعام و الإفطار</p>
+                            <p>الأغذية المعلبة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+
+      <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+    
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+    
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+    
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+    
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+    
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Sign up for our newsletter</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+    
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div class="form-outline form-white mb-4">
+                  <input type="email" id="form5Example2" class="form-control" />
+                  <label class="form-label" for="form5Example2">Email address</label>
+                </div>
+              </div>
+              <!--Grid column-->
+    
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-outline-light mb-4">
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+    
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+            repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+            eum harum corrupti dicta, aliquam sequi voluptate quas.
+          </p>
+        </section>
+        <!-- Section: Text -->
+    
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-white">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-white">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-white">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+    
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#!" class="text-white">Link 1</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 2</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 3</a>
+                </li>
+                <li>
+                  <a href="#!" class="text-white">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+      
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        // "use strict";
+        // function sum(val1,val2){
+        //     arguments=100;
+        //     console.log(arguments[0]);
+        // }
+        // sum(1,2);
+        // console.log(sum(1,2));
+    </script>
+</body>
+</html>
